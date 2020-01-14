@@ -1,0 +1,20 @@
+// import React, { Fragment, Component } from 'react'
+// import { BoaTarde, BoaNoite } from './componentes/Multiplos'
+// import BoaTarde, { BoaNoite } from './componentes/Multiplos'
+// import Multi from './componentes/Multiplos'
+// import Multi, { BoaNoite } from './componentes/Multiplos'
+
+// const elemento = <h1>React 2</h1>
+// ReactDOM.render(
+//     <div>
+//         <Multi.BoaTarde nome="Ana" />
+//         <BoaNoite nome="Bia" />
+//     </div>
+//     , document.getElementById('root'))
+
+// ReactDOM.render(
+//     <div>
+//         <Multi.BoaTarde nome="Ana" />
+//         <Multi.BoaNoite nome="Bia" />
+//     </div>
+//     , document.getElementById('root'))
