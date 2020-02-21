@@ -5,7 +5,7 @@ module.exports = {
   connection: {
     database: 'projeto-final',
     user:     'root',
-    password: '12345678'
+    password: 'root'
   },
   pool: {
     min: 2,
