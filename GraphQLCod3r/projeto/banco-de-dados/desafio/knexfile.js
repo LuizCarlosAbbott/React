@@ -3,9 +3,9 @@
 module.exports = {
   client: 'mysql',
   connection: {
-    database: 'desafio-cap-04',
+    database: 'desafio_banco_graphql',
     user:     'root',
-    password: '12345678'
+    password: 'root'
   },
   pool: {
     min: 2,
