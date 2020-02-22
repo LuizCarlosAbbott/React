@@ -1,0 +1,9 @@
+NODE_ENV=development
+
+APP_DB_HOST=localhost
+APP_DB_PORT=1234
+APP_DB_NAME=database
+APP_DB_USER=usuario
+APP_DB_PASSWROD=senha
+
+APP_AUTH_SECRET=
