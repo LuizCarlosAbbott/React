@@ -4,10 +4,11 @@ const { perfil: obterPerfil } = require('../Query/perfil')
 module.exports = {
     async novoPerfil(_, { dados }) {
         try {
-            const [ id ] = await db('perfis')
+            const [ result ] = await db('perfis')
                 .insert(dados)
+                .returning('*');
             return db('perfis')
-                .where({ id }).first()
+                .where({ id: result.id }).first()
         } catch(e) {
             throw new Error(e.sqlMessage)
         }
