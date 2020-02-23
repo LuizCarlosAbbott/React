@@ -1,10 +1,10 @@
-const jwt = require('jwt-simple');
-const { perfis: obterPerfis } = require('../Type/Usuario');
+const jwt = require('jwt-simple')
+const { perfis: obterPerfis } = require('../Type/Usuario')
 
 module.exports = {
     async getUsuarioLogado(usuario) {
-        const perfis = await obterPerfis(usuario);
-        const agora = Math.floor(Date.now() / 1000);
+        const perfis = await obterPerfis(usuario)
+        const agora = Math.floor(Date.now() / 1000)
 
         const usuarioInfo = {
             id: usuario.id,
@@ -12,14 +12,14 @@ module.exports = {
             email: usuario.email,
             perfis: perfis.map(p => p.nome),
             iat: agora,
-            ext: agora + (3 * 24 * 60 * 60)
+            exp: agora + (3 * 24 * 60 * 60)
         }
 
-        const authSecret = process.env.APP_AUTH_SECRET;
-
+        
         return {
             ...usuarioInfo,
-            token: jwt.encode(usuarioInfo, authSecret)
+            token: jwt.encode(usuarioInfo,
+                process.env.APP_AUTH_SECRET)
         }
     }
 }
